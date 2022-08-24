@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.open;
 
-public class BaseTest {
+public class RegistrationFormTest {
 
     RegistrationFormPageObject registration = new RegistrationFormPageObject();
 

@@ -1,7 +1,7 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-
+import data.RegistrationFormPageObject;
 import static com.codeborne.selenide.Selenide.$;
 
 public class Locators {
