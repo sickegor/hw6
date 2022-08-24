@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class BaseTest {
 
-    Service service = new Service();
+    RegistrationFormPageObject registration = new RegistrationFormPageObject();
 
     @BeforeEach
     void openPage() {
@@ -20,8 +20,8 @@ public class BaseTest {
 
     @Test
     void fillFormTest() {
-        service.fillForm();
-        service.clickButton();
-        service.assertForm();
+        registration.fillForm();
+        registration.clickButton();
+        registration.assertForm();
     }
 }
