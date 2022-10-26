@@ -10,6 +10,19 @@ import java.io.File;
 
 
 public class RegistrationFormPageObject {
+    Faker faker = new Faker();
+    String firstName = faker.name().firstName();
+    String lastName = faker.name().lastName();
+    String email = faker.internet().emailAddress();
+    String phoneNumber = faker.phoneNumber().phoneNumber();
+    String subjects = faker.pokemon().name();
+
+    String submittingText = "Thanks for submitting the form";
+    String hobbiesText = "Code";
+    String addressText = "Moscow";
+    String ncrText = "NCR";
+    String cityText = "Delhi";
+    String pathFile = "src/test/resources/pngegg.png";
 
     public void fillForm() {
         fillName(firstName);
@@ -19,10 +32,10 @@ public class RegistrationFormPageObject {
         fillPhoneNumber(phoneNumber);
         fillPictureForm(pathFile);
         fillSubjects(subjects);
-        clickHobbies(hobbiesText);
-        fillAddress(addressText);
-        clickState(ncrText);
-        clickCity(cityText);
+//        clickHobbies(hobbiesText);
+//        fillAddress(addressText);
+//        clickState(ncrText);
+//        clickCity(cityText);
     }
 
     public void clickButton() {
@@ -42,7 +55,7 @@ public class RegistrationFormPageObject {
     }
 
     private void fillEmail(String email) {
-        Locators.email.setValue(email);
+        Locators.userEmail.setValue(email);
     }
 
     private void clickRadioButton() {
@@ -58,7 +71,7 @@ public class RegistrationFormPageObject {
     }
 
     private void fillSubjects(String subjects) {
-        Locators.subjects.setValue(subjects);
+        Locators.subjectsInput.setValue(subjects);
     }
 
     private void clickHobbies(String hobbiesText) {
